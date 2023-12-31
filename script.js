@@ -4,14 +4,29 @@ document.addEventListener('DOMContentLoaded', function(){
     const nav = document.getElementById('nav');
     const nav_btn = document.getElementById('nav_btn');
 
-    toggle.onclick = function() {
+    const toggleNav = () => {
         toggle.classList.toggle('active');
         nav.classList.toggle('active');
     };
 
-    nav_btn.onclick = function() {
+    const closeNav = () => {
         nav.classList.remove('active');
         toggle.classList.remove('active');
-    }
+    };
+
+    toggle.onclick = toggleNav;
+    nav_btn.onclick = (event) => {
+        event.stopPropagation();
+        closeNav();
+    };
+
+    document.onclick = function(e) {
+        const isClickInsideNav = nav.contains(e.target);
+        const isClickInsideToggle = toggle.contains(e.target);
+
+        if (!isClickInsideNav && !isClickInsideToggle){
+            closeNav();
+        }
+    };
   
 });
