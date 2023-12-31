@@ -58,7 +58,7 @@ nav {
     position: fixed;
     top: 0;
     right: -1000px;
-    width: 60dvh;
+    width: 60dvw;
     height: 100dvh;
     padding: 20px;
     background-color: white;
