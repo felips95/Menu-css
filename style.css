@@ -15,8 +15,8 @@ body {
   and (-webkit-min-device-pixel-ratio: 3) 
   and (orientation: landscape) { 
     body {
-        border-left: 10px solid #ffffff; /* Cor da borda esquerda */
-        border-right: 10px solid #ffffff; /* Cor da borda direita */
+        border-left: 10px solid #333; /* Cor da borda esquerda */
+        border-right: 10px solid #333; /* Cor da borda direita */
     }
 }
 
